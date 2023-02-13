@@ -1,0 +1,432 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Inconsolata:wght@200;400&family=Nunito:ital,wght@0,400;0,700;1,400&family=Schoolbell&display=swap');
+
+:root {
+    --cor00: #ffffff;
+    --cor01: #222222;
+    --cor02: #122ab2;
+    --cor03: #2c70ff;
+    --cor04: #7c7c7c;
+    --cor05: #a4a4a4;
+    --cor06: #f7f7f7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul { /*lista sem o estilo dos pontos*/
+    list-style: none;
+}
+
+a { /*remover underline*/
+    text-decoration: none;
+}
+
+body {
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+    color: var(--cor01);
+}
+
+img {
+    display: block;
+    max-width: 100%; /*não aumenta demais*/
+                     /*diminui quando diminuir a tela*/
+}
+
+/*============== SUPERINFO =================*/
+.superinfo-bg {
+    background-color: var(--cor02);
+    color: var(--cor00);
+}
+
+.superinfo {/*container*/
+    display: flex; /*um ao lado do outro*/
+    max-width: 960px;
+    margin: 0 auto;
+    justify-content: space-between; /*espaçamento entre os elementos*/
+    flex-wrap: wrap; /*vão quebrando a linha*/
+    padding-top: 10px;
+
+}
+
+.superinfo p, .superinfo a {
+    margin: 0 10px 10px 10px;
+}
+
+.superinfo-bg a {
+    color: var(--cor00);
+}
+
+/*================= MENU ==================*/
+.menu-bg {
+    background-color: var(--cor03);
+}
+
+.menu {/*container*/
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex; /*um ao lado do outro*/
+    flex-wrap: wrap; /*quebra linha quando não couber mais*/
+    justify-content: space-between; /*espaçamento entre os elementos*/
+    align-items: center; /*alinha os itens ao centro*/
+}
+
+.menu a {
+    color: var(--cor00);
+}
+
+.menu-logo {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.menu-nav ul {
+    display: flex; /*conteúdo ao lado*/
+    flex-wrap: wrap; /*quebra de linha*/
+}
+
+.menu-nav a {
+    font-size: 20px;
+    display: block; /*<a> é inline por padrão*/
+    padding: 10px;
+}
+
+.menu-nav a:hover {
+    color: var(--cor02);
+}
+
+/*================= INTRODUÇÃO ==================*/
+.introducao {
+    font-size: 48px;
+    line-height: 1;
+    max-width: 960px; /*tamanho máximo*/
+    margin: 0 auto;
+    padding: 60px 10px;
+}
+
+/*================= SOBRE ==================*/
+.sobre  {/*container*/
+    border-top: 2px solid var(--cor03);
+    border-bottom: 2px solid var(--cor03);
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex; /*um ao lado do outro*/
+    flex-wrap: wrap;
+
+}
+
+.sobre-info {
+    /*
+    = FLEX =
+    grow: 2 ocupa um espaço 2x mais que os outros dois
+    shrink: 1
+    basis: 300px - quebra quando atingir 300px
+    */
+    flex: 2 1 300px; 
+    margin: 0 10px;
+}
+
+.sobre-info h1 {
+    font-size: 48px;
+    margin-bottom: .5em;
+}
+
+.sobre-info p {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    color: var(--cor04);
+}
+
+.sobre-img {
+    /*
+    = FLEX =
+    grow: 1 ocupa um espaço 1x mais que os outros dois
+    shrink: 1
+    basis: 160px - quebra quando atingir 160px
+    */
+    flex: 1 1 160PX; 
+    margin: 0 10px;
+}
+
+/*================= SOBRE ==================*/
+
+.produtos {
+    max-width: 960px;
+    margin: 60px auto;
+}
+.produtos h1 {
+    font-size: 48px;
+    margin: 0 10px 60px 10px;
+}
+
+.produtos-container {/*container*/
+    display: flex; /*conteúdo em linha*/
+    flex-wrap: wrap; /*quebra de linha*/
+    align-items: flex-end; /*alinha o conteúdo na parte inferior*/
+    
+}
+.produtos-item {
+    /*
+    = FLEX =
+    grow: 1 ocupa um espaço 1x mais que os outros dois
+    shrink: 1
+    basis: 175px - quebra quando atingir 175px
+    */
+    flex: 1 1 175px;
+    margin: 10px;
+}
+
+.produtos-item h2 {
+    font-size: 48px;
+    color: var(--cor05);
+    background-color: var(--cor06);
+    padding: 60px 20px;
+}
+
+.purple {
+    border-top: 8px solid #bb4dbb;
+}
+.pink {
+    border-top: 8px solid #eb4561;
+}
+.blue {
+    border-top: 8px solid #87ceeb;
+    /*align-self: flex-start; - alinha individualmente*/
+}
+
+/*================= PREÇO ==================*/
+
+.preco { /*container*/
+    background-color: var(--cor06);
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;/*alinha o conteúdo no final*/
+}
+
+.preco-item {
+    flex: 1;
+    border: 4px solid var(--cor00);
+    padding: 20px;
+    margin: 10px;
+    min-width: 260px; /*SEMPRE DEFINIR MENOS DE 280PX*/
+}
+
+.preco-item h2 {
+    font-size: 48px;
+    color: var(--cor05);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.preco-item span {
+    max-width: 300px;
+    margin: 20px auto;
+    display: block; /*span é inline por padrão*/
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    padding: 10px 0 5px 0;
+    border-top: 4px solid var(--cor00);
+    border-bottom: 4px solid var(--cor00);
+}
+
+.preco-item sup {
+    font-size: 24px;
+}
+
+.preco-item ul {
+    max-width: 300px;
+    margin: 20px auto;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-style: italic;
+    color: var(--cor04);
+}
+.preco-item li { /*alinhando o contúdo dos li - texto e o pontinho azul*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*criando pontinho*/
+.preco-item li::after {
+    content: ''; /*conteudo vazio*/
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--cor03);
+}
+
+.preco-item a {
+    max-width: 300px;
+    display: block;
+    margin: 20px auto;
+    border: 4px solid var(--cor01);
+    color: var(--cor01);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 36px;
+    padding: 15px 0;
+    text-align: center;
+}
+@media (max-width: 800px) {
+    .preco {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /*mudando a ordem dos filhos*/
+   .preco-item:nth-child(3) { /*terceiro item volta duas posições*/
+        order: -2;
+    }
+    .preco-item:nth-child(2) { /*segundo item volta uma posição*/
+        order: -1;
+    }
+}
+/*==================================*/
+
+/*========== QUALIDADE ===========*/
+.qualidade { /*container*/
+    max-width: 960px;
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.qualidade-item {
+    flex: 1 1 300px; /*baseado no 960px do max-width*/
+    margin: 20px 10px;
+}
+
+.qualidade-item h2 {
+    font-size: 36px;
+    color: var(--cor05);
+    margin-bottom: 20px;
+
+}
+
+.qualidade-item h2::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/*alterando a cor da barra lateral de cada filho h2
+(1) seleciona o 1º item (filho)
+(3n+1) seleciona o 1º e os 3ºs itens seguintes*/
+.qualidade-item:nth-child(3n+1) h2::before {
+    background-color: #ae81ff;
+}
+
+.qualidade-item:nth-child(3n+2) h2::before {
+    background-color: #f9265e;
+}
+
+.qualidade-item:nth-child(3n+3) h2::before {
+    background-color: #66d9eb;
+}
+
+.qualidade-item p {
+    font-size: 20px;
+    line-height: 1.4;
+    color: var(--cor04);
+}
+
+/*========= NEWSLETTER ===========*/
+
+.newsletter { /*container*/
+    background-color: var(--cor06);
+    padding: 60px calc((100% - 960px)/2);
+    /*
+    padding top/bottom: 60px
+    CALC ((100% - 960px)/2)
+        100% do tamanho da tela
+        960px tamanho do container
+        dividido por 2
+    */
+    display: flex; /*alinhando os itens*/
+    flex-wrap: wrap;
+}
+.newsletter-info {
+    flex: 1 1 240px;
+    margin: 0 10px;
+}
+
+.newsletter-info h1 {
+    font-size: 48px;
+    color: var(--cor05);
+}
+
+.newsletter-info p {
+    font-size: 20px;
+    font-style: italic;
+    max-width: 230px;
+    color: var(--cor04);
+    margin-bottom: 10px;
+}
+
+.newsletter-form {
+    flex: 2 1 260px;
+    margin: 0 10px;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input {
+    flex: 3 1 260px;
+    font-size: 20px;
+    color: var(--cor04);
+    font-style: italic;
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+    border: 4px solid var(--cor03);
+    background-color: transparent;
+    padding: 15px 10px;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+.newsletter-form button {
+    flex: 1 1 200px;
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--cor03);
+    color: var(--cor00);
+    margin: 0;
+    cursor: pointer;
+    border: 0; /*ou none*/
+    padding: 15px 10px;
+}
+@media (max-width: 600px) {
+    .newsletter-form button {
+        font-size: 30px;
+    }
+}
+
+.footer {
+    display: flex;
+    background-color: var(--cor03);
+    align-items: center;
+    height: 200px;
+
+}
+
+.footer p {
+    flex: 1;
+    text-align: center;
+    font-size: 36px;
+    color: var(--cor00);
+}
